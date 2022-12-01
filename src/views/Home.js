@@ -19,15 +19,18 @@ const Home = () => {
     }
 
     return (
-        <div>
-            <h1>Bienvenue sur le home</h1>
-            {formDisplayed === false && (<button onClick={displayForm}>Bouton de test</button>)}
+        <div className="home-class-title">
+            <h1>Bienvenue sur le site de la FSociety</h1>
+            <p>Ici, une fois connecté, vous trouverez les réponses à toutes vos questions...</p>
+        <div className="home-class">
+            {formDisplayed === false && (<button onClick={displayForm}>Se connecter</button>)}
             {formDisplayed === true && (
                 <div>
-                    <button onClick={closeForm}>close form</button>    
+                    <button onClick={closeForm}>abandonner</button>
                     <Form/>
                 </div>
             )}
+        </div>
         </div>
     )
 }
